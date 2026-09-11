@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRECISION RISE LLP | Institutional Market Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Branding Bar -->
+    <header class="navbar">
+        <div class="brand-container">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line-up logo-icon"></i>
+                <div class="brand-text">
+                    <span class="company-name">PRECISION RISE LLP</span>
+                    <span class="company-sub">Capital Market & Analytics Terminal</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="status-box">
+                <span class="pulse-dot"></span>
+                <span>MARKET LIVE</span>
+            </div>
+            <button class="btn-contact"><i class="fa-solid fa-envelope"></i> Contact LLP Desk</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Banner Announcement -->
+        <div class="announcement-banner">
+            <i class="fa-solid fa-circle-info"></i>
+            <span><strong>PRECISION RISE LLP Terminal:</strong> Real-time Index Trends, Volatility Analysis, and Option Chain Sentiment Engine.</span>
+        </div>
+
+        <!-- Section 1: Major Indices -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-cubes"></i> Major Indices & Trend Overview</h2>
+                <span class="update-time">Auto-refreshed: Just now</span>
+            </div>
+            <div class="grid grid-3">
+                
+                <!-- NIFTY -->
+                <div class="card index-card">
+                    <div class="card-top">
+                        <div>
+                            <h3>NIFTY 50</h3>
+                            <p class="symbol-code">NSE: NIFTY</p>
+                        </div>
+                        <span id="nifty-trend" class="badge bullish"><i class="fa-solid fa-arrow-trend-up"></i> Bullish</span>
+                    </div>
+                    <div class="price-container">
+                        <span id="nifty-price" class="price">24,350.20</span>
+                        <span id="nifty-change" class="change positive">+142.50 (+0.59%)</span>
+                    </div>
+                    <div class="card-footer">
+                        <span>Day Range:</span>
+                        <strong>24,210 - 24,380</strong>
+                    </div>
+                </div>
+
+                <!-- BANK NIFTY -->
+                <div class="card index-card">
+                    <div class="card-top">
+                        <div>
+                            <h3>BANK NIFTY</h3>
+                            <p class="symbol-code">NSE: BANKNIFTY</p>
+                        </div>
+                        <span id="banknifty-trend" class="badge neutral"><i class="fa-solid fa-arrows-left-right"></i> Sideways</span>
+                    </div>
+                    <div class="price-container">
+                        <span id="banknifty-price" class="price">52,120.80</span>
+                        <span id="banknifty-change" class="change positive">+45.10 (+0.09%)</span>
+                    </div>
+                    <div class="card-footer">
+                        <span>Day Range:</span>
+                        <strong>51,950 - 52,300</strong>
+                    </div>
+                </div>
+
+                <!-- SENSEX -->
+                <div class="card index-card">
+                    <div class="card-top">
+                        <div>
+                            <h3>SENSEX</h3>
+                            <p class="symbol-code">BSE: SENSEX</p>
+                        </div>
+                        <span id="sensex-trend" class="badge bullish"><i class="fa-solid fa-arrow-trend-up"></i> Bullish</span>
+                    </div>
+                    <div class="price-container">
+                        <span id="sensex-price" class="price">79,890.15</span>
+                        <span id="sensex-change" class="change positive">+410.30 (+0.52%)</span>
+                    </div>
+                    <div class="card-footer">
+                        <span>Day Range:</span>
+                        <strong>79,400 - 79,950</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 2: Volatility, GIFT NIFTY & Global Sentiment -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-globe"></i> Global Sentiment & Volatility</h2>
+            </div>
+            <div class="grid grid-3">
+                
+                <!-- INDIA VIX -->
+                <div class="card metric-card">
+                    <div class="metric-header">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>India VIX (Volatility)</span>
+                    </div>
+                    <div id="vix-val" class="metric-value">13.45</div>
+                    <div class="metric-sub negative"><i class="fa-solid fa-arrow-down"></i> -2.1% (Low Risk / Stable)</div>
+                    <p class="info-text">Subdued volatility favors option sellers and steady momentum.</p>
+                </div>
+
+                <!-- GIFT NIFTY -->
+                <div class="card metric-card">
+                    <div class="metric-header">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        <span>GIFT NIFTY</span>
+                    </div>
+                    <div id="gift-val" class="metric-value">24,410.00</div>
+                    <div id="gift-text" class="metric-sub positive"><i class="fa-solid fa-arrow-up"></i> +60 Points Gap-Up</div>
+                    <p class="info-text">Early sentiment indicator for Indian market opening.</p>
+                </div>
+
+                <!-- Global Markets -->
+                <div class="card metric-card">
+                    <div class="metric-header">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <span>Global Market Sentiment</span>
+                    </div>
+                    <div id="global-val" class="metric-value text-bullish">Strong Bullish</div>
+                    <div class="metric-sub positive">US Nasdaq +1.2% | Nikkei +0.8%</div>
+                    <p class="info-text">Positive cues across major international indices.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Derivatives, Option Chain & OI Intelligence -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-layer-group"></i> Option Chain & OI Intelligence Desk</h2>
+            </div>
+            <div class="grid grid-2">
+
+                <!-- Primary Option Metrics -->
+                <div class="card analytics-card">
+                    <h3><i class="fa-solid fa-sliders"></i> Derivative Indicators</h3>
+                    <div class="table-list">
+                        <div class="table-row">
+                            <span class="label">PCR (Put/Call Ratio):</span>
+                            <span id="pcr-val" class="val positive">1.15 (Bullish Bias)</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="label">Max Pain Level:</span>
+                            <span id="maxpain-val" class="val highlight">24,300 Strike</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="label">ATM Implied Volatility (IV):</span>
+                            <span id="atm-iv" class="val">14.2%</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="label">Expected Weekly Move:</span>
+                            <span id="exp-move" class="val">±180 Points</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OI Support & Resistance -->
+                <div class="card analytics-card">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Open Interest (OI) Positioning</h3>
+                    <div class="table-list">
+                        <div class="table-row">
+                            <span class="label">Major Call OI (Resistance):</span>
+                            <span id="res-val" class="val negative">24,500 Strike</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="label">Major Put OI (Support):</span>
+                            <span id="sup-val" class="val positive">24,200 Strike</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="label">Fresh OI Building:</span>
+                            <span id="oi-change" class="val">Heavy Put Writing at 24,300</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="label">Market Structure:</span>
+                            <span id="positioning" class="val positive">Long Build-up Confirmed</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Disclaimer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>PRECISION RISE LLP</h3>
+                <p>Proprietary Market Research & Analytics Division.</p>
+            </div>
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> Precision Rise LLP is an independent trading firm. The market insights, levels, option statistics, and indications presented on this dashboard are for informational and analytics purposes only and do not constitute direct financial advice or buy/sell recommendations.</p>
+            </div>
+            <div class="copyright">
+                &copy; 2026 PRECISION RISE LLP. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
